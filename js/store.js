@@ -85,7 +85,6 @@
 	
 		// If an ID was actually given, find the item and update each property
 		if (id) {	
-			console.log("clickupdate")
 			updateClick = "wrong"
 			for (var i = 0; i < todos.length; i++) {
 				if (todos[i].id === id) {
