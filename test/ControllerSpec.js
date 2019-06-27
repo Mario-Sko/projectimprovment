@@ -90,7 +90,7 @@ describe('controller', function () {
 
 		it('should show active entries', function () {
 			// TODO: write test
-			var todo = {title: 'my todo', completed: false};
+			var todo = {title: 'my todo', completed: false, title: 'my todo2', completed: true};
 			setUpModel([todo]);
 
 			subject.setView('#/active');
@@ -105,7 +105,7 @@ describe('controller', function () {
 			setUpModel([todo]);
 
 			subject.setView('#/completed');
-            expect(model.read).toHaveBeenCalledWith({completed:true}, jasmine.any(Function));
+			expect(model.read).toHaveBeenCalledWith({completed:true}, jasmine.any(Function));
 			expect(view.render).toHaveBeenCalledWith('setFilter', 'completed');
 			expect(view.render).toHaveBeenCalledWith('showEntries', [todo]);
 			
