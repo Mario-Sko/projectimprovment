@@ -60,12 +60,12 @@ describe('controller', function () {
 
 	it('should show entries on start-up', function () {
 		// TODO: write test
-		var todo = { title: "my todo" };
-    	setUpModel([todo]);
+		var todo = {title: "my todo"};
+    		setUpModel([todo]);
 
-    	subject.setView('');
+    		subject.setView('');
 
-    	expect(view.render).toHaveBeenCalledWith("showEntries", [todo]);
+    		expect(view.render).toHaveBeenCalledWith("showEntries", [todo]);
 	});
 
 	describe('routing', function () {
@@ -177,12 +177,12 @@ describe('controller', function () {
 	describe('toggle all', function () {
 		it('should toggle all todos to completed', function () {
 			// TODO: write test
-			var todo = { id: 42, title: "my todo", completed: true };
+			var todo = {id: 42, title: "my todo", completed: true};
 			setUpModel([todo]);
 
 			subject.setView("");
 
-			view.trigger("toggleAll", { completed: true });
+			view.trigger("toggleAll", {completed: true});
 
 			expect(model.update).toHaveBeenCalledWith(
 				42,
@@ -193,13 +193,13 @@ describe('controller', function () {
 
 		it('should update the view', function () {
 			// TODO: write test
-			  var todos = { id: 42, title: "my todo", completed: true };
+			var todos = {id: 42, title: "my todo", completed: true};
 				
      
 			setUpModel([todos]);
 
 			subject.setView("");
-			view.trigger("toggleAll", { completed: true });
+			view.trigger("toggleAll", {completed: true});
 
 			expect(view.render).toHaveBeenCalledWith("elementComplete", {
 				id: 42,
@@ -212,7 +212,7 @@ describe('controller', function () {
 	describe('new todo', function () {
 		it('should add a new todo to the model', function () {
 			// TODO: write test
-			 setUpModel([]);
+			setUpModel([]);
 
 			subject.setView("");
 			view.trigger("newTodo", "A new to do item");
