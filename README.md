@@ -1,5 +1,5 @@
 
-# Testing with Jasmine Framework and bug fixing - Project unit 8 OpenClassrooms (in process)
+# Testing with Jasmine Framework and bug fixing - Project unit 8 OpenClassrooms
 
 The technical document: https://github.com/Mario-Sko/projectimprovment/wiki
 
